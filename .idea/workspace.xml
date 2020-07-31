@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07f9719c-dd2b-4299-a0be-b4192bfd4657" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1f8cfXonCKfQ4hecyKMtKSfWQtu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07f9719c-dd2b-4299-a0be-b4192bfd4657" name="Default Changelist" comment="" />
+      <created>1595603263763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595603263763</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="415" y="183" key="#PSD" timestamp="1595603930008">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="415" y="183" key="#PSD/0.0.1600.860@0.0.1600.860" timestamp="1595603930008" />
+    <state x="378" y="8" key="SettingsEditor" timestamp="1595604068930">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="378" y="8" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1595604068930" />
+    <state x="349" y="142" width="1099" height="620" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595604205129">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="349" y="142" width="1099" height="620" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1600.860@0.0.1600.860" timestamp="1595604205129" />
+  </component>
+</project>
