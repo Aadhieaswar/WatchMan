@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "project2",
+    "name": "React_Project2",
     "description": "This project is really great.",
-    "slug": "project2",
+    "slug": "React_Project2",
     "privacy": "public",
     "platforms": [
       "ios",

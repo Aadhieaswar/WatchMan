@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07f9719c-dd2b-4299-a0be-b4192bfd4657" name="Default Changelist" comment="" />
+    <list default="true" id="07f9719c-dd2b-4299-a0be-b4192bfd4657" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc-old" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc-old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/movieDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieDisplay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1f8cfXonCKfQ4hecyKMtKSfWQtu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -33,18 +53,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595603263763</updated>
+      <workItem from="1596684193070" duration="279000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="415" y="183" key="#PSD" timestamp="1595603930008">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="415" y="183" key="#PSD/0.0.1600.860@0.0.1600.860" timestamp="1595603930008" />
-    <state x="378" y="8" key="SettingsEditor" timestamp="1595604068930">
+    <state x="288" y="8" key="#Project_Structure" timestamp="1596684335622">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="378" y="8" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1595604068930" />
+    <state x="288" y="8" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1596684335622" />
+    <state x="378" y="8" key="SettingsEditor" timestamp="1596684304036">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="378" y="8" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1596684304036" />
     <state x="349" y="142" width="1099" height="620" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595604205129">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

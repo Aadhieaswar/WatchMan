@@ -5,9 +5,9 @@ import { NavigationContainer } from '@react-navigation/native' // important to u
 import { createStackNavigator } from '@react-navigation/stack' // importing the stack navigator
 
 // import components
+import Movie from './movieDetails.js'
 import Search from './search.js'
 import Result from './result.js'
-import Movie from './movieDetails.js'
 
 // use react navigation
 const stack = createStackNavigator() // create a stack object
@@ -41,7 +41,7 @@ const header = {
         headerStyle: {
             backgroundColor: '#1d2124',
             height: 75,
-            borderBottomWidth: 4,
+            borderBottomWidth: 5,
             borderBottomColor: '#fa575d',
         },
         headerBackTitle: 'Back',

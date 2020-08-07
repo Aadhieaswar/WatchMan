@@ -1,32 +1,58 @@
 import React, { Component } from 'react'
-import { TouchableWithoutFeedback, View, StyleSheet, Text, TextInput, Alert, TouchableOpacity, KeyboardAvoidingView, Image, Keyboard } from 'react-native'
+import { TouchableWithoutFeedback, View, StyleSheet, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, Image, Keyboard } from 'react-native'
 
 var search = '' // global search variable to save the search text
+const API_URL = 'https://www.omdbapi.com/?apikey=fda039b5&r=json&'
+var results = [] // variable to store the result objects in
+var movieInfos = []
+var pageCount = 1 // get the total page numbers
 
 export default class Search extends Component {
 
-    getResult(data) {
-        search = data.nativeEvent.text // value.nativeEvent.text to get the value of the TextInput
+    async getResult(data) {
+        search = data
+        return fetch(API_URL + `s=${search}&`).
+            then((req) => req.json()).
+            then((json) => this.addToArray(json)).
+            catch((err) => console.error(err))
     }
 
     safeSearch = () => {
-        if (search === '' || search === null) {
-            Alert.alert(
-                'Invalid Search',
-                'Please enter a valid search text!',
-                [
-                    {
-                        text: 'Ok', onPress: () => console.log('retrying search...')
-                    },
-                ],
-                {
-                    cancelable: false
-                },
-            )
-        } else {
-            this.props.navigation.navigate('Results', { search: search, })
-        }
+        Keyboard.dismiss()
+        return this.props.navigation.push('Results', { results: results, search: search, movieInfos: movieInfos, pageCount: pageCount})
     }
+
+    addToArray = (data) => {
+        results = []
+        movieInfos = []
+        if (data['Response'] === 'False') {
+            var objects = []
+            return false
+        } else {
+            const objs = data['Search']
+            pageCount = Math.ceil(data['totalResults'] / 10) // get total number of results
+            console.log(pageCount)
+            var objects = objs.map((item) => {
+                results.push(item)
+            })
+
+            for (var i = 0; i < results.length; i++) {
+                fetch(API_URL + `i=${results[i].imdbID}&plot=short&`). // provides additional information to display
+                    then((res) => res.json()).
+                    then((data) => {
+                        movieInfos.push({
+                            Language: data.Language,
+                            Rated: data.Rated,
+                            Genre: data.Genre,
+                            Runtime: data.Runtime,
+                        })
+                    }).
+                    catch((err) => console.log(err))
+            }
+        }
+        return objects
+    }
+
 
     render() {
         return(
@@ -38,7 +64,7 @@ export default class Search extends Component {
                         <Text style={styles.sText}>
                             Search for Movies
                         </Text>
-                            <TextInput placeholder='Search...' style={styles.input} onChange={(text) => this.getResult(text)}/>
+                            <TextInput placeholder='Search...' style={styles.input} onChangeText={(text) => this.getResult(text)}/>
                         <TouchableOpacity style={styles.backButton} onPress={this.safeSearch}>
                             <Text style={styles.btnTxt}>Search</Text>
                         </TouchableOpacity>
