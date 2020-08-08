@@ -4,7 +4,6 @@ import { TouchableWithoutFeedback, View, StyleSheet, Text, TextInput, TouchableO
 var search = '' // global search variable to save the search text
 const API_URL = 'https://www.omdbapi.com/?apikey=fda039b5&r=json&'
 var results = [] // variable to store the result objects in
-var movieInfos = []
 var pageCount = 1 // get the total page numbers
 
 export default class Search extends Component {
@@ -19,36 +18,20 @@ export default class Search extends Component {
 
     safeSearch = () => {
         Keyboard.dismiss()
-        return this.props.navigation.push('Results', { results: results, search: search, movieInfos: movieInfos, pageCount: pageCount})
+        return this.props.navigation.push('Results', { results: results, search: search, pageCount: pageCount})
     }
 
     addToArray = (data) => {
         results = []
-        movieInfos = []
         if (data['Response'] === 'False') {
             var objects = []
             return false
         } else {
             const objs = data['Search']
             pageCount = Math.ceil(data['totalResults'] / 10) // get total number of results
-            console.log(pageCount)
             var objects = objs.map((item) => {
                 results.push(item)
             })
-
-            for (var i = 0; i < results.length; i++) {
-                fetch(API_URL + `i=${results[i].imdbID}&plot=short&`). // provides additional information to display
-                    then((res) => res.json()).
-                    then((data) => {
-                        movieInfos.push({
-                            Language: data.Language,
-                            Rated: data.Rated,
-                            Genre: data.Genre,
-                            Runtime: data.Runtime,
-                        })
-                    }).
-                    catch((err) => console.log(err))
-            }
         }
         return objects
     }

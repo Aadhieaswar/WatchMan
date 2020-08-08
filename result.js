@@ -5,7 +5,6 @@ import { Text, View, FlatList, TouchableHighlight, StyleSheet } from 'react-nati
 import MovieRow from './movieRow.js'
 
 const API_URL = 'https://www.omdbapi.com/?apikey=fda039b5&r=json&'
-var id = 0 // counter variable to loop through the plot array
 
 export default class Results extends Component {
 
@@ -13,7 +12,6 @@ export default class Results extends Component {
         super(props)
         this.state = {
             results: this.props.route.params.results,
-            info: this.props.route.params.movieInfos,
             page: 2,
             reRender: false,
             totalPages: this.props.route.params.pageCount,
@@ -52,56 +50,37 @@ export default class Results extends Component {
             catch((err) => console.error(err))
     }
 
-    returnExtraInfo = (data) => {
-        var array = [] // array to store additional info
-        for (item in data) {   // loop through the data to get info for each extra movie
-            fetch(API_URL + `i=${item.imdbID}&plot=short&`).
-                then((res) => res.json()).
-                then((jsonRes) => {
-                    array.push({
-                        Language: jsonRes.Language,
-                        Rated: jsonRes.Rated,
-                        Genre: jsonRes.Genre,
-                        Runtime: jsonRes.Runtime,
-                    })
-                }).
-                catch((err) => console.error(err))
-        }
-        return array
-    }
-
     updateState = (newData) => {
-        const UpdatedData = this.state.results.concat(newData)
-        console.log(UpdatedData)
-        const extraInfo = this.returnExtraInfo(newData)
-        extraInfo = this.state.info.concat(extraInfo)
-        id = 0 // reset counter
-        this.setState(prevState => ({
-            info: [...extraInfo],
-            results: [...UpdatedData],
-            reRender: !prevState.reRender,
-            pagesDisplayed: (prevState.pagesDisplayed + 1),
-        }))
-        console.log(this.state.reRender)
+        if (this.state.totalPages === 1 || newData.length === 0 || this.state.totalPages === this.state.page) {
+            return
+        } else {
+            id = 0
+            const UpdatedData = this.state.results.concat(newData)
+            this.setState(prevState => ({
+                results: [...UpdatedData],
+                reRender: !prevState.reRender,
+                page: (prevState.page + 1),
+            }))
+        }
     }
 
     renderExtraContent = () => {
-        console.log('reached scroll end')
         const search = this.props.route.params.search
         fetch(API_URL + `s=${search}&page=${this.state.page}`).
             then((res) => res.json()).
-            then((data) => this.updateState(data)).
+            then((data) => {
+                if (data['Response'] === 'True') {
+                    this.updateState(data['Search'])
+                } else {
+                    const empty = []
+                    this.updateState(empty)
+                }
+            }).
             catch((err) => console.error(err))
     }
 
     renderItem = (data) => {
-        var info = this.state.info[id++]
-
-        return <MovieRow Key={data['item'].imdbID} {...data['item']} {...info} LookUpMovie={() => this.sendInfo(data['item'].imdbID)} />
-    }
-
-    componentWillUnmount() {
-        id = 0 // to reset the counter to get the plot
+        return <MovieRow Key={data['item'].imdbID} {...data['item']} LookUpMovie={() => this.sendInfo(data['item'].imdbID)} />
     }
 
     render() {
@@ -128,7 +107,7 @@ const styles = StyleSheet.create({
         flex: 1,
         borderWidth: 2,
         borderColor: '#fa575d',
-        borderRadius: 5,
+        width: 300,
         padding: 5,
         backgroundColor: '#1d2124',
     },
