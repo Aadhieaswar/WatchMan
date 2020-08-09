@@ -8,6 +8,10 @@ var pageCount = 1 // get the total page numbers
 
 export default class Search extends Component {
 
+    state = {
+        err: '',
+    }
+
     async getResult(data) {
         search = data
         return fetch(API_URL + `s=${search}&`).
@@ -17,8 +21,14 @@ export default class Search extends Component {
     }
 
     safeSearch = () => {
-        Keyboard.dismiss()
-        return this.props.navigation.push('Results', { results: results, search: search, pageCount: pageCount})
+        if (search.length < 3) {
+            this.setState({err: '⚠ Please Enter at least 3 characters to search for movies'})
+            return
+        } else {
+            this.setState({err: ''})
+            Keyboard.dismiss()
+            return this.props.navigation.push('Results', { results: results, search: search, pageCount: pageCount})
+        }
     }
 
     addToArray = (data) => {
@@ -51,6 +61,7 @@ export default class Search extends Component {
                         <TouchableOpacity style={styles.backButton} onPress={this.safeSearch}>
                             <Text style={styles.btnTxt}>Search</Text>
                         </TouchableOpacity>
+                        <Text style={styles.error}>{this.state.err}</Text>
                     </View>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
@@ -104,5 +115,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fa575d',
         borderRadius: 5,
         marginTop: 5,
-    }
+    },
+    error: {
+        color: 'red',
+        padding: 5,
+        fontSize: 14,
+        marginTop: 20,
+    },
 })
