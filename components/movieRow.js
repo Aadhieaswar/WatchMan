@@ -12,7 +12,7 @@ export default class MovieListComp extends Component {
             <TouchableHighlight style={styles.movieWrapper} onPress={this.props.LookUpMovie}>
                 <View style={styles.movieContainer}>
                     <Text style={styles.title}>{this.props.Title}</Text>
-                    <Image source={this.props.Poster === 'N/A'? require('./assets/NA.png') : {uri: this.props.Poster}} style={styles.poster} />
+                    <Image source={this.props.Poster === 'N/A'? require('./../assets/NA.png') : {uri: this.props.Poster}} style={styles.poster} />
                 </View>
             </TouchableHighlight>
         )
