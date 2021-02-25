@@ -15,7 +15,7 @@ const stack = createStackNavigator() // create a stack object
 function HeaderImage() {
   return(
     <Image style={{ height: 35, width: 35 }} source={require('./assets/play.png')} />
-  )
+  );
 }
 
 export default class App extends Component {  // use the following method to use a stack navigator in react-native

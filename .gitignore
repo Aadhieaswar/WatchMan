@@ -1,6 +1,13 @@
+# npm
 node_modules/**/*
 .expo/*
 *.log
 npm-debug.*
+
+# vim files
 *.swp
 *.sw*
+
+# vscode
+.vs
+.vscode
