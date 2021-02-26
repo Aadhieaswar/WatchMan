@@ -1,4 +1,4 @@
-# React Native - Movie Browser
+# Movie Browser - React Native
 
 ### Requirements
 - `npm` and `node` installed in your system
@@ -28,5 +28,5 @@
 ### Credits
 - Harvard CS50 for this idea of a wonderful project.
 - OMDb API for providing the movie information (live API)
-- Implemented by Aadhieaswar Senthil Kumar
-    - Contact me at: aadhieaswar@gmail.com
+- Implemented by __Aadhieaswar Senthil Kumar__
+    - Contact me at: <aadhieaswar@gmail.com>
