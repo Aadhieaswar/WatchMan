@@ -5,7 +5,7 @@
 - `expo` app in your android or IOS phone (recommended)
 
 ### Setup
-- Clone repo using `https://github.com/Aadhieaswar/movie-API-app-react-native.git`
+- Clone repo using `https://github.com/Aadhieaswar/Movie-Browser-React-Native.git`
 - `cd` into the cloned repo and run `npm install`
 - Run start scripts from the following:
   - `npm start`: provides a QR code which you can scan from your phone to view the app in the expo app (recommended)
