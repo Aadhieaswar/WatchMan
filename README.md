@@ -1,5 +1,8 @@
 # Watch Man - React Native
 
+### Description
+Use WatchMan to look up any movie or series to get information directly from the OMDb database! Enjoy!!
+
 ### Requirements
 - `npm` and `node` installed in your system
 - `expo` app in your android or IOS phone (recommended)
