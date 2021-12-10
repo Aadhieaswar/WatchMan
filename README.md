@@ -1,4 +1,4 @@
-# Movie Browser - React Native
+# Watch Man - React Native
 
 ### Requirements
 - `npm` and `node` installed in your system
@@ -27,7 +27,7 @@
 ###### Search for movies in the app to view their details as provided by the [OMDb API](http://www.omdbapi.com/)
 
 ### Credits
-- Harvard CS50 for this idea of a wonderful project.
-- OMDb API for providing the movie information (live API)
+- Harvard CS50 provided this idea for a wonderful project.
+- OMDb API for providing the movie/series information (live API)
 - Implemented by __Aadhieaswar Senthil Kumar__
     - Contact me at: <aadhieaswar@gmail.com>
