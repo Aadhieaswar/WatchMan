@@ -21,11 +21,11 @@ Use WatchMan to look up any movie or series to get information directly from the
 - The crucial files in the repo home directory are:
   - `App.js`: the file that is run to view the app
   - `package.json`: consists of all the dependencies and the run scripts for the app
-  - `api\api.js`: consists of all the functions needed for API calls
-  - `screens`: this directory consists of all the different screen views files for the app
-  - `components`: this directory consists of all the components created in react for the app
   - `assets`: this directory consists of all the images for the splash screens and such
-
+  - `src`: consists of all the files for the app except the main `App.js` file  
+    - `api\api.js`: consists of all the functions needed for API calls
+    - `screens`: this directory consists of all the different screen views files for the app
+    - `components`: this directory consists of all the components created in react for the app
 ### Feature
 ###### Search for movies in the app to view their details as provided by the [OMDb API](http://www.omdbapi.com/)
 
