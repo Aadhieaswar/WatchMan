@@ -49,13 +49,13 @@ const header = {
     headerTitle: <HeaderImage />,
     headerStyle: {
       backgroundColor: '#1d2124',
-      height: 75,
+      height: 100,
       borderBottomWidth: 5,
       borderBottomColor: '#fa575d',
+      shadowOpacity: 0,
     },
     headerTitleStyle: {
       height: 50,
-      marginBottom: 10,
       justifyContent: 'center',
       textAlign: 'center',
     },
