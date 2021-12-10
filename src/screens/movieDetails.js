@@ -23,10 +23,10 @@ export default class Movie extends Component {
               <Text style={styles.txt}>Genre {'\n'} <Text style={styles.tag}>{movie.Genre}</Text> </Text>
               <Text style={styles.txt}>Type {'\n'} <Text style={styles.tag}>{movie.Type}</Text> </Text>
               <Text style={styles.txt}>Language {'\n'} <Text style={styles.tag}>{movie.Language}</Text> </Text>
-              <Text style={styles.txt}>IMDB Rating {'\n'} <Text style={styles.tag}>{movie.imdbRating}</Text> </Text>
+              <Text style={styles.txt}>IMDB Rating {'\n'} <Text style={styles.tag}>{!movie.imdbRating ? 'N/A' : movie.imdbRating}</Text> </Text>
               <Text style={styles.txt}>Metascore {'\n'} <Text style={styles.tag}>{movie.Metascore}</Text> </Text>
               <Text style={styles.txt}>Actors {'\n'} <Text style={styles.tag}>{movie.Actors}</Text> </Text>
-              <Text style={styles.txt}>Production {'\n'} <Text style={styles.tag}>{movie.Production}</Text> </Text>
+              <Text style={styles.txt}>Production {'\n'} <Text style={styles.tag}>{!movie.Production ? 'N/A' : movie.Production}</Text> </Text>
               <Text style={styles.txt}>Country {'\n'} <Text style={styles.tag}>{movie.Country}</Text> </Text>
               <Text style={styles.txt}>Plot {'\n'} <Text style={styles.tag}>{movie.Plot}</Text> </Text>
             </ScrollView>

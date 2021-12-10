@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "WatchMan",
-    "description": "Look up movies that you want using the WatchMan app!",
+    "description": "Look up movies/shows that you want to know about using the WatchMan app!",
     "slug": "WatchMan",
     "privacy": "public",
     "platforms": [
@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/play.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
