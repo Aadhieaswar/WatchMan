@@ -16,7 +16,7 @@ export default class Movie extends Component {
       <View style={styles.container}>
         <View style={styles.movieContainer}>
           <Text style={styles.title}>{movie.Title}</Text>
-          <Image source={movie.Poster === 'N/A'? require('./../assets/NA.png') : {uri: movie.Poster}} style={styles.poster} resizeMode='contain' />
+          <Image source={movie.Poster === 'N/A'? require('./../../assets/NA.png') : {uri: movie.Poster}} style={styles.poster} resizeMode='contain' />
           <View style={styles.scrollContainer}>
             <ScrollView contentContainerStyle={styles.info}>
               <Text style={styles.txt}> Year {'\n'} <Text style={styles.tag}>{movie.Year}</Text> </Text>

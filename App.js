@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native' // important to u
 import { createStackNavigator } from '@react-navigation/stack' // importing the stack navigator
 
 // import screens to display
-import Movie from './screens/movieDetails.js'
-import Search from './screens/search.js'
-import Result from './screens/result.js'
+import Movie from './src/screens/movieDetails.js'
+import Search from './src/screens/search.js'
+import Result from './src/screens/result.js'
 
 // use react navigation
 const stack = createStackNavigator() // create a stack object

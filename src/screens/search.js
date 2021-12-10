@@ -52,7 +52,7 @@ export default class Search extends Component {
     return(
       <KeyboardAvoidingView behavior='position' style={styles.wrapper}>
         {/* using images as static files */}
-        <Image source={require('./../assets/Movies_Logo.png')} style={styles.logo}/>
+        <Image source={require('./../../assets/Movies_Logo.png')} style={styles.logo}/>
         <TouchableWithoutFeedback Style={styles.container} onPress={Keyboard.dismiss}>
           <View style={styles.container}>
             <Text style={styles.sText}>

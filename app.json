@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "React_Project2",
-    "description": "This project is really great.",
-    "slug": "React_Project2",
+    "name": "WatchMan",
+    "description": "Look up movies that you want using the WatchMan app!",
+    "slug": "WatchMan",
     "privacy": "public",
     "platforms": [
       "ios",
